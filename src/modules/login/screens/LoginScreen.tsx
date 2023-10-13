@@ -1,10 +1,24 @@
-import { BackgroundImage } from '../styles/loginScreen.styles';
+import Input from '../../../shared/inputs/input/Input';
+import {
+  BackgroundImage,
+  ContainerLogin,
+  ContainerLoginScreen,
+  LimitedContainer,
+  LogoImage,
+} from '../styles/loginScreen.styles';
 
 const LoginScreen = () => {
   return (
-    <div>
-      <BackgroundImage src="./background.jpg" />
-    </div>
+    <ContainerLoginScreen>
+      <ContainerLogin>
+        <LimitedContainer>
+          <LogoImage src="./amazon-logo.png" />
+          <Input title="USUÁRIO" />
+          <Input title="SENHA" />
+        </LimitedContainer>
+      </ContainerLogin>
+      <BackgroundImage src="./background.png" />
+    </ContainerLoginScreen>
   );
 };
 export default LoginScreen;
